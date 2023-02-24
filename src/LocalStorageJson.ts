@@ -1,4 +1,4 @@
-import Local from './Local'
+import Local from './Local.js'
 
 export default class LocalStorageJSON {
     create<LocalObject>(
