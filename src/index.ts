@@ -3,4 +3,6 @@ import LocalStorageJson from './LocalStorageJson.js'
 
 global.localStorage = new LocalStorage('localStorage')
 
-export const localStorageJson = new LocalStorageJson()
+const localStorageJson = new LocalStorageJson()
+
+export default localStorageJson
