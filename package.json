@@ -1,9 +1,9 @@
 {
     "name": "localstorage-json-use",
-    "version": "1.0.0",
+    "version": "1.0.3",
     "description": "User localstorage with json",
     "main": "build/index.js",
-    "types": "build/index.ts",
+    "types": "build/index.d.ts",
     "type": "module",
     "scripts": {
         "start:dev": "npx tsx --watch src",
