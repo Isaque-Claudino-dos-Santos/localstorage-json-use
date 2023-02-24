@@ -1,14 +1,14 @@
 {
     "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "build",
+        "allowJs": true,
+        "checkJs": true,
+        "strict": true,
         "target": "ES2022",
         "module": "ES2022",
         "moduleResolution": "node",
-        "esModuleInterop": true,
-        "declaration": true,
-        "allowJs": true,
-        "strict": true,
-        "rootDir": "src",
-        "outDir": "build"
+        "declaration": true
     },
     "files": ["src/index.ts"],
     "exclude": ["node_modules", "localStorage"],
