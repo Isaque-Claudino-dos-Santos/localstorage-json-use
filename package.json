@@ -1,6 +1,6 @@
 {
     "name": "localstorage-json-use",
-    "version": "1.0.12",
+    "version": "1.0.14",
     "description": "User localstorage with json",
     "main": "build/index.js",
     "types": "build/index.d.ts",
@@ -8,7 +8,7 @@
     "scripts": {
         "start:dev": "npx tsx --watch src",
         "test": "jest",
-        "build": "rm -rf build && tsc"
+        "build": "rm -rf build && npx tsc"
     },
     "keywords": [],
     "author": "",
@@ -18,6 +18,7 @@
     },
     "devDependencies": {
         "@types/jest": "^29.4.0",
+        "@types/node": "^18.14.1",
         "@types/node-localstorage": "^1.3.0",
         "ts-jest": "^29.0.5",
         "tsx": "^3.12.3",
