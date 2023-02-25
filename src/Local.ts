@@ -1,19 +1,31 @@
 export default class Local<LocalObject> {
-    private jsonData: string
-    private localName: string
+    public jsonData: string
+    public localName: string
+    public localNameFix: string = 'LocalStorage'
 
-    constructor(localName: string, object: LocalObject) {
-        this.localName = `${localName}LocalStorage`
+    constructor(public localNamePreFix: string, object: LocalObject) {
+        this.localName = `${localNamePreFix}${this.localNameFix}`
         this.jsonData = JSON.stringify(object)
-        localStorage.setItem(this.localName, this.jsonData)
+        this.exists().then((exists) => {
+            if (!exists) localStorage.setItem(this.localName, this.jsonData)
+        })
     }
 
-    access(): LocalObject {
+    async exists(): Promise<boolean> {
+        const data = localStorage.getItem(this.localName)
+        return !(typeof data === 'undefined' || data === null)
+    }
+
+    async accessData(): Promise<LocalObject> {
         return JSON.parse(this.jsonData)
     }
 
     async save<LocalObject>(object: LocalObject) {
         this.jsonData = JSON.stringify(object)
         localStorage.setItem(this.localName, this.jsonData)
+    }
+
+    async clear() {
+        localStorage.clear()
     }
 }
