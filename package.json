@@ -1,6 +1,6 @@
 {
     "name": "localstorage-json-use",
-    "version": "1.0.27",
+    "version": "1.0.28",
     "description": "User localstorage with json",
     "main": "build/index.js",
     "types": "build/index.d.ts",
@@ -8,7 +8,9 @@
     "keywords": [
         "localstorage",
         "json",
-        "async"
+        "async",
+        "web storage",
+        "storage"
     ],
     "author": "",
     "license": "ISC",
