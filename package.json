@@ -1,6 +1,6 @@
 {
     "name": "localstorage-json-use",
-    "version": "1.0.25",
+    "version": "1.0.26",
     "description": "User localstorage with json",
     "main": "build/index.js",
     "types": "build/index.d.ts",

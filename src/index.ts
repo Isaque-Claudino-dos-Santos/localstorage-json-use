@@ -6,5 +6,5 @@ global.localStorage = new LocalStorage('localStorage')
 
 const localStorageJson = new LocalStorageJson()
 
-export type TypeLocal = typeof Local
+export { Local }
 export default localStorageJson
