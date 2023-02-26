@@ -49,6 +49,18 @@ myLocal.save(data)
 const newData = await myLocal.accessData() // return {name: 'newName', age: 32}
 ```
 
+OR
+
+```TS
+await myLocal.update((data) => {
+  data.name = 'newName'
+  data.age = 32
+  return data
+})
+
+const newData = await myLocal.accessData() // return {name: 'newName', age: 32}
+```
+
 ### Clear
 
 Remove localStorage file

@@ -20,12 +20,18 @@ export default class Local<LocalObject> {
         return JSON.parse(this.jsonData)
     }
 
-    async save<LocalObject>(object: LocalObject) {
+    async save(object: LocalObject) {
         this.jsonData = JSON.stringify(object)
         localStorage.setItem(this.localName, this.jsonData)
     }
 
     async clear() {
         localStorage.clear()
+    }
+
+    async update(callback: (data: LocalObject) => LocalObject) {
+        const data = await this.accessData()
+        const newData = await callback(data)
+        await this.save(newData)
     }
 }
