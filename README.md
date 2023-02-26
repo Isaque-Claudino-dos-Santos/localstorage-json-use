@@ -17,10 +17,12 @@ base to use object oriented programming with json and asynchronous methods.
 ``` TS 
 import localStorageJson from 'localstorage-json-use'
 
-const myLocal = localStorageJson.create('my'{
+const myLocal = localStorageJson.create('person'{
   name: 'My name',
   age: 20
 })
+
+myLocal.localName// return personLocalStorage
 ```
 
 ### Update Data
