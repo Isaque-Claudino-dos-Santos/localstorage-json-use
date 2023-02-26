@@ -35,7 +35,7 @@ const newData = await myLocal.accessData() // return {name: 'newName', age: 32}
 ```
 
 ### Clear
-Remove localStorage file it is save 
+Remove localStorage file
 ```TS
 myLocal.clear()
 ```
