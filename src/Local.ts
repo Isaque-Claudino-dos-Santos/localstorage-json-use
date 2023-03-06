@@ -17,7 +17,7 @@ export default class Local<LocalObject> {
     }
 
     async accessData(): Promise<LocalObject> {
-        return JSON.parse(this.jsonData)
+        return JSON.parse(localStorage.getItem(this.localName))
     }
 
     async save(object: LocalObject) {
